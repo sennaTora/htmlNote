@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- <button id="btn_1">发起GET请求</button> -->
+    <input type="button" value="数据get" onclick="get()">
+    <input type="button" value="数据post" onclick="post()">
+
+    <form action="localhost:8080" method="post" name="simpleParam_1">   
+        用户名：  <input type="text"   name="u_n" />     <br />       
+        密 码：   <input type="int"    name="age" />     <br />            
+        <input type="submit" value="提交信息"/>          <br />
+    </form>
+</body>
+<script>
+    function get(){
+        // axios({
+        //     method:"get",
+        //     url:"http://yapi.smart-xwork.cn/mock/169327/emp/list"
+        // }).then(result => {console.log(result.data);})
+        axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then(result_0=>{//result_0的括号不加也可
+            console.log(result_0.data);
+        });    
+    }
+
+    function post(){
+        // axios({
+        //     method:"post",
+        //     url:"http://yapi.smart-xwork.cn/mock/169327/emp/deleteByld",
+        //     data:"id=1"
+        // }).then(result => {console.log(result.data);})
+        axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteByld",id="1"
+        ).then((result)=>{
+            console.log(result.data);
+        });
+    }
+////////注释掉的部分，是以前的写法///////////////////////////////////////////
+
+</script>
+</html>

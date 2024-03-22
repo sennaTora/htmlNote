@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P_0</title>
+</head>
+<script src="jquery.min.js"></script>
+<body>
+    <button id="btn_get">不带参get请求</button>
+
+    <script>
+        $(function(){
+            $('#btn_get').on('click',function(){
+                $.get('http://www.liulongbin.top:3006/api/getbooks',{id:1},function(reT){
+                    console.log('111');console.log(reT);
+                    
+                })
+            })
+        })
+    </script>
+</body>
+</html>

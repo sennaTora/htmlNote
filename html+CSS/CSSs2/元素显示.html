@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 块元素比如 <h1到6> <p> <ul> <ol> <li> -->
+    <div>独占一行</div>
+    <div>都可以调节宽高,边距</div>
+    <div>默认宽度为容器宽度（父级宽度）</div>
+    <div>其中可以放块元素和行内元素</div>
+    <div>文字类的块元素(如p,h1到6)里面不可放块元素</div>
+
+    <br />
+
+    <!-- 行内元素，比如<span> <a> <strong> <b> <em> <i> <del> <s> <ins> <u>-->
+    <span>一行多个</span>                          <br />
+    <span>不可以调节宽高</span>                    <br />
+    <span>默认宽度为其内容的宽度</span>             <br />
+    <span>其中可以放文本和行内元素</span>           <br />
+    <span>链接(&lt;a&gt;)里面不可放链接，偶尔放块元素没问题</span><br />
+
+    <br />
+
+    <!-- 行内块元素，<img /><input /><td> -->
+    <input type="text" value="行内块元素">  <input type="text" value="一行多个,可调宽高,默认内容宽度" >
+
+</body>
+</html>

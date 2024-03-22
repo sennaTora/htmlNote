@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        // window.onload = function () {
+        //     createCode();
+        // }
+        
+        function formSubmit() {
+            document.getElementById("myForm").submit()
+        }
+    </script>
+</head>
+
+<body>
+    <p>在下面的文本框中输入一些文本，然后点击提交按钮就可以提交表单。</p>
+
+    <form id="myForm" action="http://47.93.32.177:8000/api/AdministratorOperation/FormDeclaration" method="post">
+        手机号：<input type="string" name="Phone" size="20"><br />
+        密码：<input type="string" name="Password" size="20"><br />
+        <br />
+        <input type="button"  value="提交" onclick="window.location.href='http:\/\/47.93.32.177:8000/api/AdministratorOperation/FormDeclaration'" />
+    </form>
+</body>
+
+</html>

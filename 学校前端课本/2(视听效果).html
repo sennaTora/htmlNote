@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!-- 因为此时还没学到这个，在pink老师那里 -->
+<style>
+.a1{
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom:50px;
+    background-color: pink;
+}
+
+div:hover {
+    width: 600px;
+    transition-property: width;
+    transition-duration: 2000ms;
+    transition-timing-function: ease-in;    /* 速度曲线，课本P200 */
+    transition-delay: 500ms;        /* 延迟 */
+    /* transition:property,duration,timing-function,delay;    复合属性*/
+}
+
+div div {
+    background-color: #ff6b6b;
+    display: inline-block;
+    background:url(视听/jb.jpg);
+    height: 50px;
+    width: 100px;
+    margin-left:-25px ;
+}
+
+#b1 {
+    /* width: 200px;        若加上这个，div.hover失效*/
+    transform: translate(300px,100px);  /*平移*/
+    transform: scale(0.7,0.7);          /*放缩*/
+    transform: rotate(45deg);           /*旋转*/
+}
+
+#b2 {
+    background-image: url(视听/图.png);
+    transform: skew(15deg,15deg);       /*倾斜*/
+    transform-origin:10% 15%;           /*改基点位置*/  
+}
+
+#b3 {
+    background-image: url(视听/图.png);
+    transform: rotateY(60deg);
+    /* transform: rotate3d(1,0,0,60deg); */
+    perspective: 250;                   /*透视*/    /*(不知为何不起作用)*/
+    -webkit-perspective: 250px; 
+}
+
+#c1 {
+    animation-name: AN ;            /* 动画名称 */
+    animation-duration: 3000ms;     /* 动画时间 */
+    animation-timing-function: ease-in;    /* 速度曲线，课本P214 */
+    animation-delay: 500ms;         /* 延迟 */
+    animation-iteration-count: 2;   /* 次数 */
+    animation-direction: alternate; /* 播放方向(逆向) */
+    /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction */
+    /* ↑ 复合属性，我这么理解 */
+}
+
+@keyframes AN {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes AN_2 {  /* 开头结尾透明，0.3到0.7时不透明 */
+    from,to{opacity: 0;}
+    30%,70%{opacity: 1;}
+}
+
+
+</style>
+<body>
+    <!--    ↓更多属性见课本P193↓    -->
+    <video src="视听/沙丁鱼从地里钻了出来.mp4" controls="controls" poster="视听/动图.gif">无法显示吗？</video>
+    <audio src="视听/火焰纹章.Last Engage.mp3" controls="controls"></audio>
+    <!--   为了适配不同浏览器，见课本P195   -->
+
+    <div class="a1"></div>
+    <div class="a1" id="b1">平移+放缩+旋转</div>
+    <div class="a1" id="b2">倾斜</div>
+    <div class="a1" id="b3">3D旋转</div>
+    <div class="a1" id="c1"></div>
+
+    <div style="position: absolute;top: 500px;right: 500px;  background-color: #7dff6c;">
+        <div>设置</div>
+        <div>margin</div>
+        <div>负值</div>
+        <div>的</div>
+        <div>用处</div>
+    </div>
+
+
+</body>
+</html>

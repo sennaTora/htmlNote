@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大家,喜欢JavaScript吗?</title>
+
+
+    <!-- 2.内嵌式的js ↓ -->
+    <script>
+        var a = prompt('请用户输入：'),                                             //输入框（字符串类型）
+            b = 'js由ECMAs(js语法),dom(页面文档对象模型),bom(浏览器对象模型)组成',   //var声明变量，其数据类型不确定，万能
+            c;                                                                  //多个赋值，用逗号隔开
+        alert(a);                                                              //警示框
+        alert(b);
+        alert(c);                                                                //因没有赋值，显示的是undefined
+        console.log('这里是为\b\b\b编程者看的文字');                                 //控制台输出
+        //"字符串可以'外单内双'或'内单外双'", 换行仍是\n, \t缩进,\b空格,如果有输出不了的字符、在前面加上\       
+        //   ↑ ↑ ↑ \b不太好用且没用，其他C++与其一样 ↑ ↑ ↑
+        //console.log(c);                                                          //因没有赋值，报错，卡住，下面不执行了
+        
+        document.write('<script>alert("今年欢笑复明年");<\/script>');
+        document.write('<strong>秋月春风等闲度</strong>');
+
+        // 声明变量时(唯一我不知的：)首字母不要大写（驼峰命名法）
+        // 数字前加0，表示这是8进制；加0x，表示这是16进制；
+        // 最大值,最小值,无穷大,无穷小,非数值(NaN),BV1ux411d75J,22-数字型Number
+        console.log(isNaN(555)); //isNaN()判断if不是数字，是数字则返回false
+        
+    </script>
+
+
+    <!-- 3.外部式的js ↓-->
+    <script src="外部.js"></script> <!-- 这中间不能写东西 -->
+
+
+</head>
+
+<body>
+
+    <!-- 1.行内式的js ↓-->                  <!-- 一般不用 -->
+    <input type="button" value="red alert=红色警戒" onclick="alert('onclick=on点击')">
+
+
+</body>
+
+</html>

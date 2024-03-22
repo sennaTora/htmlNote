@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本属性&样式表</title>
+    <style>                                                                                     /*内部样式表*/    
+        h1 {
+            text-align: center;            /*位置*/
+        }
+        .u_l{
+            text-decoration: underline;    /*下划线*/     /* 文本装饰 */
+            /*none 无，line-through 删除线，overline 上划线*/
+        }
+        p {
+            text-indent: 2em;      /*首行缩进2字符*/            /*也可用像素,px*/
+            line-height: 25px;     /*行间距*/
+        }
+
+        span{
+            letter-spacing: 1px;         /* 字间距 */
+            word-spacing: 100px;         /* 单词间距，仅对英文有效 */
+            text-transform: uppercase;   /* 英文转为大写 */ 
+            /* capitalize 首字母大写  lowercase 转为小写*/
+            white-space: normal;         /* 空白符处理，要用的话自己去查 */
+
+            /*
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            处理溢出文本的，用的话自己查
+            */
+        }
+        /*  “阴影”在“CSSs/盒子模型”里  */
+    </style>
+    <link rel="stylesheet" href="外部样式表.css">                                               <!-- 外部样式表 -->  
+</head>
+
+<body>
+    <h1 class="u_l">题宣州开元寺水阁阁下宛溪夹溪居人</h1>
+    <div>杜牧</div>
+    <p>
+    <div>
+        六朝文物草连空，天淡云闲今古同。</div>
+    <span style="color:aqua;font-size:25px;">鸟去鸟来山色里，人歌人哭水声中。</span> <!-- 行内样式表 -->
+    <div>
+        深秋帘幕千家雨，落日楼台一笛风。</div>
+    <div>
+        惆怅无因见范蠡，参差烟树五湖东</p>
+</body></div>
+
+<span>咋瓦鲁多 & the world</span>
+</html>
+
+
+<!-- 课本上的方法(P49)：<font face="" size="" color="">  XXXXX  </font>-->

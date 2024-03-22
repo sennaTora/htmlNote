@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+</head>
+<link rel="stylesheet" href="survey.css">
+<body>
+    <h2 align="center">调查问卷</h2>
+    <div id="MAIN">
+    <div id="main">
+    <form action="http://localhost:8080/user" method="post" name="form_name_0">
+        I.您选择A还是B?<div class="div_q">
+        <div class="DIO"><input type="radio"  name="Q_1" value="A" id="a_0" class="ra_dio"/>  <label for="a_0">A.我选A</label></div>
+        <div class="DIO"><input type="radio"  name="Q_1" value="B" id="b_0" class="ra_dio"/>  <label for="b_0">B.我选B</label></div> 
+        </div>
+
+        I.您有什么建议？<div class="div_q">
+        <textarea cols="30" rows="4" placeholder="在此填写" ></textarea>
+        </div>
+
+        <input type="submit" value="提交信息" id="sub"/> 
+    </form>
+    </div>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: "#MAIN",
+        data(){
+            return {
+                tableData: []
+            }
+        },
+        mounted(){
+            axios.get('/sur_list_0').then(res_0=>{
+                if(res_0.data.code){
+                    this.tableData = res_0.data.data;
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</html>

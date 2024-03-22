@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokes</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(images_案例/001.jpg);
+        background-repeat: repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+    }
+
+    a {
+        /*display: inline-block;*/
+        /*会有默认的缝隙，难以控制*/
+        float: left;
+        /*已经 display:block; 了*/
+        width: 150px;
+        height: 150px;
+
+        border-radius: 30px 0px 30px 0px;
+        margin: 5px;
+    }
+
+    a:hover {
+        box-shadow: 8px 8px 15px 7px rgb(0, 0, 0, .6);
+        /*.35*/
+    }
+
+    .move {
+        position: relative;
+        top: 300px;
+        left: 250px;
+    }
+
+    .fairy {
+        background-color: rgb(235, 143, 230);
+    }
+
+    .ground {
+        background-color: rgb(216, 120, 68);
+    }
+
+    .electric {
+        background-color: rgb(244, 210, 60);
+    }
+
+    .fire {
+        background-color: rgb(254, 156, 82);
+    }
+
+    .bug {
+        background: rgb(145, 192, 46);
+    }
+
+    .water {
+        background-color: rgb(79, 144, 213);
+    }
+
+    #content {
+        background-position: 50% 50%;
+        background-color: rgb(135, 206, 235, 0.5);
+        /* rgba(255, 255, 255, 0.35);*/
+        /* width: 700px; */
+
+        border: 1px solid transparent;
+        border-radius: 50px;
+
+        float: left;
+
+        width: 1050px;
+        height: 900px;
+
+        box-sizing: border-box;
+    }
+
+    #left {
+        float: left;
+        background-color: rgba(192, 251, 255, 0.4);
+
+        width: 150px;
+        height: 900px;
+    }
+
+    .left_ele {
+        height: 25px;
+        width: 120px;
+        text-decoration: none;
+        border-radius: 0%;
+    }
+
+    #father {
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        width: 1200px;
+        /* height: 900px; */
+    }
+
+    #top {
+        height: 100px;
+        margin: 0 auto;
+        background-color: rgb(255, 235, 133,.7);
+    }
+
+    #bottom {
+        height: 100px;
+        margin: 0 auto;
+        background-color: rgb(255, 235, 133,.7);
+    }
+
+    .clear {
+        clear:both;
+    }
+    
+</style>
+
+
+<body>
+    <div id="top"></div>
+    <div id="father">
+        <div id="left"><a href="images_案例/属性相克表.png" class="left_ele">属性相克表</a></div>
+        <div id="content">
+            <table class="move">
+                <tr>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E6%B3%A2%E5%85%8B%E6%AF%94" class="fairy"
+                            target="_blank"><img src="https://media.52poke.com/wiki/6/6b/175Togepi.png"
+                                width="150px"></a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E5%8D%A1%E6%8B%89%E5%8D%A1%E6%8B%89" class="ground"
+                            target="_blank"> <img src="https://media.52poke.com/wiki/2/2a/104Cubone.png"
+                                width="150"></a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E4%BC%8A%E5%B8%83" class="fairy" target="_blank"> <img
+                                src="https://media.52poke.com/wiki/e/e2/133Eevee.png" width="150"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <a href="https://wiki.52poke.com/wiki/%E5%B0%8F%E7%81%AB%E9%BE%99" class="fire" target="_blank"><img
+                            src="https://media.52poke.com/wiki/7/73/004Charmander.png" width="150"></a></td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E6%AD%A3%E7%94%B5%E6%8B%8D%E6%8B%8D" class="electric"
+                            target="_blank"><img src="https://media.52poke.com/wiki/a/a3/311Plusle.png" width="150"></a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E8%B4%9F%E7%94%B5%E6%8B%8D%E6%8B%8D" class="electric"
+                            target="_blank"><img src="https://media.52poke.com/wiki/e/e7/312Minun.png" width="150"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <a href="https://wiki.52poke.com/wiki/%E5%8F%AF%E8%BE%BE%E9%B8%AD" class="water"
+                        target="_blank"><img src="https://media.52poke.com/wiki/5/53/054Psyduck.png" width="150"></a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E5%91%86%E5%91%86%E5%85%BD" class="water"
+                            target="_blank"><img src="https://media.52poke.com/wiki/7/70/079Slowpoke.png"
+                                width="150"></a>
+                    </td>
+                    <td>
+                        <a href="https://wiki.52poke.com/wiki/%E6%B4%BE%E6%8B%89%E6%96%AF" class="bug"
+                            target="_blank"><img src="https://media.52poke.com/wiki/d/d4/046Paras.png" width="150"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="bottom"></div>
+
+</html>

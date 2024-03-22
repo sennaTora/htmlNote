@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE_TEXT</title>
+
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app_0">    <!-- 注意，要用这个id-->
+        <input type="text" v-model="message_0">
+        {{ message_0 }}    </br></br>
+        <div v-on:click="fun_0" style="height: 20px;width: 100px; background-color: #000000;"></div>
+    
+        <a :href="url_0">{{ url_0 }}</a>       </br><!-- 省略了'bind'一词 --> 
+        <input type="text" v-model="url_0">    </br></br>
+
+        <input type="button" value="点击按钮" v-on:click="fu_0">    </br></br>
+
+        猜数字：<input type="text" v-model="num_0">
+        <span v-if="num_0 == 44">您猜对了</span>
+        <span v-else-if="num_0 &gt; 44">这个太大了</span>
+        <span v-else>这个太小了</span>    </br></br>
+
+        <div v-for="addr in array_0">{{ addr }}</div>
+        <div v-for="(addr,index) in array_0">{{ index + 0 }}{{ addr }}</div>    </br>
+        <div v-show="1">这里是可能被隐藏的内容</div>    </br></br>
+    </div>
+
+</body>
+
+
+<script>
+    new Vue({
+        el:"#app_0",
+        data(){            
+            return {
+                message_0:"Hello Vue!",
+                url_0:"https://www.bilibili.com/",
+                num_0:0,
+                array_0:["君主蛇","裙儿小姐","差不多娃娃","奇诺栗鼠","蚀梦梦","人造细胞卵"]
+            }            
+        },
+        methods:{
+            fu_0:function(){
+                alert("点击了按钮");
+            },
+            fun_0:function(){
+        alert("shuchu!");
+        alert('输出：'+app_0.message_0);
+        alert(app_0.data);
+        alert(app_0.array_0);
+        alert(app_0.num_0<1);
+        // alert(data());
+    }
+        },
+        mounted(){
+            alert("vue挂载完成,一般此时发送请求到服务端")
+        },
+    })
+</script>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试响应</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios-0.18.0.js"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/jj.js"></script>
+</head>
+
+<style>
+    body {
+        background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wEaz?ver=0eaa);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+    }
+</style>
+
+<body>
+<form action="http://10.152.200.108:8080/addUser1" method="post" id="my_form">
+                 <input type="text" name="quesFirst" id="quesFirst"/>
+                 <input type="text" name="quesSecond" id="quesSecond"/>
+                 <input type="text" name="quesThird" id="quesThird"/>
+                 <input type="text" name="quesForth" id="quesForth"/>
+                 <input type="submit" value="提交信息" onclick="addUser()"/>
+</form>
+</body>
+<script>
+    function sub(){
+        alert("调用了sub函数");
+        axios.post('/sub_1',{quesFirst:'6',quesSecond:'1',quesThird:'4',quesForth:"来自log_Cha_2,露易丝"}
+        ).then(
+            res_1=>{alert("then1-a"); alert(res_1);alert("then1-b"); });
+    }
+
+    new Vue({
+        el: "#MAIN2",
+        mounted(){
+            alert("挂载");
+            axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+            axios({
+                method:"post",
+                url:"/sub_0",
+                data:{"quesFirst":"1","quesSecond":"1","quesThird":"4",quesForth:"loginChange中提交"}
+            }).then(
+                res_0=>{ alert("then1-a");alert(res_0);alert("then2-b"); });
+        },
+        methods: { }
+    });
+
+    // $(function () {
+    //     $("#my_form").ajaxForm(function (data) {
+    //             console.log(data);
+    //             alert("运行 了 这个 ajax");
+    //             console.log(JSON.stringify(data));
+    //             switch (data) {
+    //                 case 1:
+    //                     alert("用户登录成功");
+    //                     location.href="用户界面2(预约).html";
+    //                     break;
+    //                 default:
+    //                     break;
+    //             }
+    //         }
+    //     );
+    // });
+</script>
+</html>
+

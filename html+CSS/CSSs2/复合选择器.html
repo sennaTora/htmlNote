@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*↓后代选择器（可以多代）*/   /*只要是后代，都可以*/
+        ol li {                             
+            color: pink;
+        }
+
+        .uuu li {                           /*三种基本选择器都可以*/
+            color: brown;
+        }
+
+    /*↓子代选择器（只选定，包括进去的儿子）*/
+        li > p {                            
+            color: rgb(165, 42, 165);
+        }
+
+        tr > td {
+            color: rgb(165, 42, 165);
+        }
+        
+    /*↓并集选择器*/
+        div,.lei_ming {                             
+             color: pink;
+        }
+
+    /*↓交集选择器*/
+    p.special {                             
+             color: rgb(230, 22, 56);
+        }
+
+
+    /*↓(链接)伪类选择器*/ /*顺序不可颠倒,lvha*/
+    /*只能单独指定样式*/
+    a:link {             /*未被访问        的链接*/
+        color: aqua;
+        text-decoration: none;
+    }
+    a:visited {          /*已被访问        的链接*/
+        color: darkorange;
+        text-decoration: underline;
+    }    
+    a:hover {            /*指针在其上      的链接*/
+        color: greenyellow;
+        text-decoration: underline;
+    } 
+    a:active {           /*鼠标按下未弹起  的链接*/
+        color: red;
+    } 
+
+    
+    /*↓(focus)伪类选择器（选定的表单）*/
+    input:focus {
+        background-color: rgb(0, 225, 255);
+    }
+
+
+    </style>
+    </head>
+
+<body>
+    <ol>ffewf
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+    </ol>
+
+    <ul class="uuu">
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+    </ul>
+
+
+    <ul>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+        <li>后代选择器</li>
+    </ul>
+
+    <dl>
+        <li>
+            儿子
+            <p>
+                孙子
+            </p>
+        </li>
+    </dl>
+
+    <table>
+        <tr>
+            儿子
+            <td>孙子</td>
+            <td>孙子</td>
+        </tr>
+        <tr>
+            儿子
+            <td>孙子</td>
+            <td>孙子</td>
+        </tr>
+    </table>
+
+    <div>并集选择器(标签选择器)</div>
+    <ul class="lei_ming">
+        <li>并集选择器(类名选择器)</li>
+        <li>并集选择器(类名选择器)</li>
+        <li>并集选择器(类名选择器)</li>
+    </ul>
+
+    <p>器择选集交</p>
+    <p class="special">交集选择器</p>
+    <div class="special">器择选集交</div>         <br />
+
+    <a href="https://www.bilibili.com/video/BV1T841177xr">伪类选择器</a>          <br />
+    
+    <input type="foucs伪类选择器">
+    <input type="foucs伪类选择器">
+    <input type="foucs伪类选择器">
+
+</body>
+
+</html>

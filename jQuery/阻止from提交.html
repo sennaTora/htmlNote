@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script src="jj.js"></script>
+</head>
+
+<body>
+    <form id="my_form" action="http://47.93.32.177:8000/api/AdministratorOperation/FormDeclaration" method="post" >
+        手机号：<input type="text" name="name_1" size="20"><br />
+        <!-- 密码：<input type="text" name="Password111" size="20"><br /> -->
+        <button type="submit"> 提交</button>
+    </form>
+
+    <script>
+
+$(function () {
+    $("#my_form").ajaxForm(function (data) {
+            console.log(data);
+            console.log(JSON.stringify(data));
+        }
+    );
+});
+        // $(function(){
+        //     $('#my_form').on ('submit',function(){
+        //         console.log('监听成功');
+        //         // location.href='https://www.bilibili.com';
+        //     })
+        // })
+    </script>
+</body>
+
+</html>
+
+
+<!-- <input type="button"  value="提交" onclick="window.location.href='http:\/\/47.93.32.177:8000/api/AdministratorOperation/FormDeclaration'" /> -->

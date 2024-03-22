@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个普通的网页</title>
+</head>
+<!-- 对象见P250~253 -->
+<!-- 事件见P255~256 -->
+<script>
+    // var W=0,H=0;
+    var xxx = setInterval(function(){console.log(get());},2000); 
+
+    function B() {
+    var nw = window.open('https://www.bilibili.com');
+    nw.close();
+}
+
+function bye() {
+    alert("那就，再见了");
+    window.close();
+}
+
+function t() {
+    document.write("你确定？");
+}
+
+function T() {
+    setTimeout("t()", 2000);
+
+}
+
+function Q() {
+    document.write("五秒后显示答案");
+    var t_1 = setTimeout('A()', 5000);
+    // clearTimeout(t_1);          清除计时器
+}
+function A() { document.write(" 答案是钝角"); }
+
+function get() {
+    var H = innerHeight;
+    var W = innerWidth;
+}
+</script>
+
+<body>
+    <div onclick="alert( W +'*'+ H)" style="width: 100px;height: 100px;background-color:#eeff7e;">你多胖了？</div>
+
+    <input type="button" value="明天再见吧" onclick="bye()">
+
+    <input type="button" value="答题" onclick="Q()">
+    
+</body>
+</html>

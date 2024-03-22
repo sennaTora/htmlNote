@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire_1</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios-0.18.0.js"></script>
+</head>
+<body>
+<h2 align="center" id="MAIN2">调查问卷</h2>
+<div  onclick="sub()" style="height: 500px; width: 500px;background-color: #8ce2ff;"></div>
+<form action="/sur_1" method="post" name="sur_name">         <!-- ↓自动填写 -->
+    <input type="radio"  name="QuesFirst" value="1"/>A
+    <input type="radio"  name="QuesFirst" value="2"/>B
+    用户名：  <input type="text"  name="QuesSecond" value="你的名字是XX" maxlength="10" style="color:gray"/>     <br />
+    性别：    <input type="radio"  name="QuesThird" value="33"/><label for="an">男</label>
+    <input type="radio"  name="QuesThird" value="44"/>  <label for="v">女</label>     <br />
+
+    <!-- 多选： 文科<input type="checkbox" name= "k" value="1"/>
+              理科<input type="checkbox" name="k" value="2"/>     <br /> -->
+    留言：<textarea cols="每行多少字" rows="显示的行数" name="QuesForth" value="这里是textarea标签"></textarea>                 <br />
+    <input type="submit" value="提交信息"/>
+
+</form>
+
+</body>
+
+<script>
+    function sub(){
+
+        alert("调用了sub函数");
+        axios.post('/sub_1',{QuesFirst:'6',QuesSecond:'1',QuesThird:'4',QuesForth:"路易斯"}).then(res_1=>{
+                    alert(res_1);
+                     console.log(res_1);
+            });
+    }
+
+
+    new Vue({
+        el: "#MAIN2",
+        mounted(){
+            alert("挂载");
+            let postData = qs.stringify({
+            QuesFirst:1,QuesSecond:1,QuesThird:4,QuesForth:tiansuohaoer})
+            axios.post('/sub_0',postData).then(res_0=>{
+            alert("挂载成功");
+                    alert(res_0);
+            });
+
+        },
+        methods: {
+
+        }
+    });
+</script>
+</html>

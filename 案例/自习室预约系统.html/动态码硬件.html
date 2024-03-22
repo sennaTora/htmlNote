@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试-图书馆门口硬件</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url(001.jpg);
+            background-position: 50% 50%;
+        }
+        #result {
+           
+            background-color: rgb(135, 206, 235,.8);
+            width: 1500px;
+            height: 730px;
+            font-size: 200px;
+            font-family: '黑体';
+            text-align: center;
+            line-height: 730px;
+            border-radius: 40% 0 40% 0;
+        }
+
+        /* $.get('http://47.93.32.177:8000/swagger/index.html',function(res) {
+        console.log(res)
+    }) */
+    </style>
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <!-- <button>动态签到码</button> -->
+
+    <script>
+
+
+        // const btn = document.getElementsByTagName('button')[0];    //获取button元素
+        const result = document.getElementById("result");
+
+        // for (let i=999999;i>=0;i--){}
+        setInterval(function(){const xhr = new XMLHttpRequest();   //创建对象
+            xhr.open('GET', 'http://47.93.32.177:8000/api/Check');   //初始化，设置请求方式和url
+            xhr.send();                                     //发送
+            xhr.onreadystatechange = function () {             //处理服务端返回结果
+                if (xhr.readyState === 4 && xhr.status == 200) {
+
+                    result.innerHTML = xhr.response;
+                    // }
+
+                } else console.log('ErRoR');
+            } },3000);
+        
+            
+        
+    </script>
+
+
+
+</body>
+
+</html>

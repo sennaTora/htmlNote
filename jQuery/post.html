@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        #result {
+            background-color: skyblue;
+            width: 300px;
+            height:200px;
+        }
+        /* $.get('http://47.93.32.177:8000/swagger/index.html',function(res) {
+        console.log(res)
+    }) */
+
+    </style>
+
+</head>
+
+<body>
+    <button id="">发起请求</button>
+    <div id="result"></div>
+    <button>按钮</button>
+
+
+    <script>
+        $('div').hide();
+        $(function() {$('div').hide();} );
+        const btn_0 =document.getElementsByTagName('button')[0];    //获取button元素
+        const result_0 = document.getElementById("result");
+        btn_0.onclick = function() {                            //绑定事件
+            const xhr_0 =new XMLHttpRequest();                  //创建对象
+            xhr_0.open('POST','http://47.93.32.177:8000/api/Check');   //初始化，设置请求方式和url
+            xhr_0.send();                                     //发送
+            xhr_0.onreadystatechange =function(){             //处理服务端返回结果
+                if(xhr_0.readyState === 4) {
+                    if(xhr_0.status >= 200 && xhr_0.status < 300 ) {
+                        // console.log(xhr.status);
+                        // console.log(xhr.statusText);
+                        // console.log(xhr.getAllResponseHeaders());
+                        // console.log(xhr.response);
+                        result.innerHTML = xhr.response;
+                    }
+                    else console.log('ErRoR');
+                }
+            }
+        }
+       
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网页动态时间</title>
+    <style>
+        body {
+            background-image: url(images_案例/无标题_2.png);
+            background-repeat: no-repeat;
+        }
+
+        .d1 {
+            height: 760px;
+        }
+
+        .s1 {
+            float: left;
+            width: 1380px;
+            height: 10px;
+            /* background-color: #fff; */
+        }
+
+        span {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var span = document.getElementsByTagName('span')[0];
+            var dateStr = formatDate();
+            // 将时间放置到span内
+            span.innerText = dateStr;
+            // 每隔一分钟，再放置一次最新的时间
+            setInterval(function () {
+                span.innerText = formatDate();
+            }, 60000);
+            //格式化年月日时分秒 
+            function formatDate() {
+                var date = new Date();
+                //获取出生年月日
+                var Year = 2003;
+                var Month = 3;
+                var Day = 18;
+                // var hour = 18;
+                // var min = 25;
+                // var sec = 00;
+
+                d = new Date();
+                var nowYear = d.getFullYear();
+                var nowMonth = d.getMonth()+1;     
+                var nowDay = d.getDate();
+                // var nowhours = d.getHours();
+                // var nowmin = d.getMinutes();
+                // var nowsec = d.getSeconds();
+
+                var age_Diff = nowYear - Year;      //年之差
+                var month_Diff = nowMonth - Month;  //月之差
+                var day_Diff = nowDay - Day;        //日之差
+                // var hours_Diff = nowhours - hour;   //时之差
+                // var min_Diff = nowmin - min;        //分之差
+                // var sec_Diff = nowsec - sec;        //秒之差
+
+                // if (sec_Diff < 0) {
+                //     min_Diff--;
+                //     sec_Diff += 60;
+                // }
+
+                // if (min_Diff < 0) {
+                //     hours_Diff--;
+                //     min_Diff += 60;
+                // }
+
+                // if (hours_Diff < 0) {
+                //     day_Diff--;
+                //     hours_Diff += 24;
+                // }
+                console.log("1:"+day_Diff);
+                if (day_Diff < 0) {console.log("触发日减");   //没过18号的情况
+                    month_Diff--;
+                    var DAY = 31;
+                    if (nowMonth == 5 || nowMonth == 7 || nowMonth == 10 || nowMonth == 12) {
+                        DAY = 30;
+                    }
+                    if (nowMonth == 3) {
+                        var j = 0;
+                        if (nowYear / 400 == 0) {
+                            console.log('是闰年'); j = 1;
+                        }
+                        else if (nowYear / 4 != 0) {
+                            console.log('不是闰年'); j = 0;
+                        }
+                        else if (nowYear / 100 != 0) {
+                            console.log('是闰年'); j = 1;
+                        }
+                        if (j = 1) {
+                            DAY = 29;
+                        }
+                        else {
+                            DAY = 28;
+                        }
+                    }
+                    day_Diff += DAY;  //主要是这个数字的问题
+                }
+                console.log("2:"+day_Diff);
+
+                if (month_Diff < 0) {console.log("触发月减");
+                    age_Diff--;
+                    month_Diff += 13;
+                }
+
+                return age_Diff + ' ' + month_Diff + ' ' + day_Diff ;// + hours_Diff + ':' + min_Diff + ':' + sec_Diff;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="d1"></div>
+    <div class="s1"></div>
+    <span>将来放置时间</span>
+</body>
+
+</html>

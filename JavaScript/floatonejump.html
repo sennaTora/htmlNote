@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOJ</title>
+</head>
+<script>
+        var r1 = "{{ results_str }}";
+        let r2 = r1.replaceAll("&#x27;", "")
+        r2 = r2.slice(2, -2)
+        let r3 = r2.split('), (').map(row => row.split(', ').map(String));
+
+        function generateTable() {
+            var bn_str = "Errorstr";
+
+            const table0 = document.createElement('table');
+            table0.setAttribute("border", "1");
+            for(item of r3){
+                console.log("加载中....")
+                if(item[0]!=bn_str){
+                    bn_str=item[0];
+                    //const thead = document.createElement('thead');
+                    const tr0 = document.createElement('tr');
+                    tr0.textContent = item[0];
+                    table0.appendChild(tr0);
+
+
+                    const tr1 = document.createElement('tr');
+                    const tr2 = document.createElement('tr');
+
+                    var tc1 = []
+                    for (let i = 1; i <= 9; i++) {
+                        const tag = document.createElement('td');
+
+                        if(i==1){
+                            tag.textContent = "合约名称";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==2){
+                            tag.textContent = "合约代码";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==3){
+                            tag.textContent = "现价";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==4){
+                            tag.textContent = "成交量";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==5){
+                            tag.textContent = "交易所标准保证金%";
+                            tag.setAttribute("colspan", "3");
+                        }
+                        if(i==6){
+                            tag.textContent = "交易所标准手续费";
+                            tag.setAttribute("colspan", "4");
+                        }
+                        if(i==7){
+                            tag.textContent = "每跳毛利\n(单位/元)";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==8){
+                            tag.textContent = "每跳净利\n(单位/元)";
+                            tag.setAttribute("rowspan", "2");
+                        }
+                        if(i==9) {
+                            tag.textContent = "备注";
+                            tag.setAttribute("rowspan", "2");
+                        }
+
+                        tr1.appendChild(tag);
+                    }
+
+                    for (let i = 1; i <= 7; i++) {
+                        const tag = document.createElement('td');
+
+                        if(i==1){
+                        tag.textContent = "买开%";
+                        }
+                        if(i==2){
+                        tag.textContent = "卖开%";
+                        }
+                        if(i==3){
+                        tag.textContent = "保证金/元";
+                        }
+                        if(i==4){
+                        tag.textContent = "开仓";
+                        }
+                        if(i==5){
+                        tag.textContent = "平昨";
+                        }
+                        if(i==6){
+                        tag.textContent = "平今";
+                        }
+                        if(i==7){
+                        tag.textContent = "开+平/元";
+                        }
+                        tr2.appendChild(tag);
+                    }
+
+
+                    table0.appendChild(tr1);
+                    table0.appendChild(tr2);
+
+
+
+                    //table0.appendChild(thead);
+
+
+                }
+                else{
+                    const tr = document.createElement('tr');
+
+                    for (let i = 1; i <= 14; i++) {
+                        const tag = document.createElement('td');
+                        if(i == 1 || (i >= 4 || i <= 13)){
+                            tag.textContent = item[i];
+                        }
+                        if(i == 2){
+                            tag.textContent = item[3];
+                        }
+                        if(i == 3){
+                            tag.textContent = item[18];
+                        }
+                        if(i == 14){
+                            tag.textContent = item[19];
+                        }
+                        tr.appendChild(tag);
+                    }
+
+                    table0.appendChild(tr);
+                    //console.log(table0);
+                }
+
+            }
+            var objective0 = document.getElementById("center0");
+            objective0.appendChild(table0);
+
+            var objective1 = document.getElementsByClassName('temp0'); // 删除"加载中···"标签
+            for (var i = 0; i < objective1.length; i++) {
+                objective1[i].remove();
+            }
+            return 0;
+        }
+</script>
+
+<style>
+    body{
+        background-image: url(https://source.unsplash.com/random/1280x720);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .temp0{
+        font-size: xx-large;
+    }
+
+    #head0{
+        background: rgb(97, 255, 207);
+        height: 50px;
+    }
+
+    #center0{
+        background: rgba(255, 255, 98, 0.89);
+        background-position: 50% 0;
+        height: 100%; /* 高度可扩展 */
+        width: auto;
+        margin:0 180 0 180;
+    }
+</style>
+<body onload = "generateTable();">
+    <div id="head0"></div>
+    <div id="center0">
+        <div class="temp0">数据加载中···</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

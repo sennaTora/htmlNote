@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {                                  
+            font-family: '宋体','黑体';           /* 字体 */
+            font-style: normal;   /*italic*/      /*倾斜或不倾斜*/
+        }
+        body {
+            font-size: 20px;                     /*文字大小*/        /*(本来说不包括标题的，实际是包括了)*/
+        }
+        /* h3 { font-size: 30px; } */
+        .bold {
+            font-weight: 700;                    /*文字粗细*/    /*400相当于normal，700相当于bold*/
+        }
+        div {
+            /*font: style weight size height family*/    /* 顺序不可换*/     /*size、family是必须的*/
+              font: normal/700/200px/200 '黑体';                           /*为什么不起效？？？？？？*/
+        }
+    </style>
+    
+</head>
+<body>
+    <h3>标题</h3>
+    <p>pink老师的嘱托</p>
+    <p class="bold">这里加粗</p>
+    <div>这里复合</div>
+</body>
+</html>

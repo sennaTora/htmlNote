@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(bg.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+    }
+
+    input {
+        background-color: rgb(255, 255, 255,.2);
+    }
+
+    #i_p {
+        width: 150px;
+        height: 45px;
+        border-radius: 10px 10px 10px 10px;
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+    #i_p_s {
+        width: 70px;
+    }
+
+    form {
+        float: left;
+        margin: 0 auto;
+    }
+
+    #top {
+        background-color: rgb(255, 238, 0,.3);
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+        color: rgb(200, 238, 255);
+    }
+    
+    #con {
+        float: left;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 500px;
+        height: 400px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .a_1 {
+        display: inline-block;
+        width: 150px;
+        height: 45px;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 40px;
+        text-align:center;
+        text-decoration: none;
+        border: 2px solid black;
+        color: black;
+        font-size: 25px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+    }
+
+    .a_2 {
+        display: inline-block;
+        width: 60px;
+        height: 20px;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align:center;
+        text-decoration: none;
+        border: 2px solid black;
+        color: black;
+        font-size: 5px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .insee_1 {
+        /* background-color: rgb(255, 255, 255); */
+        height: 120px;
+    }
+
+    .insee_2 {
+        /* width: 120px; */
+        height: 65px;
+        font-size: 35px;
+        background-color: rgb(255, 238, 0,.3);
+        border-radius: 50px 50px 0 0;
+        line-height: 65px;
+    }
+
+    .insee_3 {
+        float: left;
+        width: 105px;
+        height: 120px;
+    }
+
+    .child{
+        float: left;
+    }
+
+    .father {
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        width: 500px;
+        height: 450px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    
+</style>
+<body>
+    <div id="top">
+        <div class="child"><img src="http://ee-c.lcu.edu.cn:84/picture/2E52725320DE49EB833895B3DDDE1B38.png" alt="图片消失"> </div>
+        <div class="child">&nbsp;&nbsp;自习室预约系统</div>        
+    </div>
+    <div class="father">
+        <div class="insee_1"></div>
+        <div id="con">
+            <div class="insee_2">                                                                                                                                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</div>
+            <div class="insee_3"></div>
+            <form action="（服务器）" method="get" name="这个是表单名字">   
+                <br />
+                手机号:&nbsp;&nbsp;<input type="text" name="u_n" maxlength="18" style="color:gray"/>
+                <input type="button" id="i_p_s" value="发送验证码"/>     <br /><br /> 
+                验证码:&nbsp;&nbsp;<input type="password" maxlength="14"/>   <br /><br /> 
+                密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" maxlength="14"/>   <br /> <br />   
+                请再次输入密码：<br />                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" maxlength="14"/>   <br />         
+                <br /> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="登录页面.html" class="a_1">注册</a>     <br /><br />
+                <input input type="checkbox" checked="checked" /><a href="用户协议.html" style="text-decoration: none;color: rgb(0, 128, 255);">《用户协议》</a>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                <a href="登录页面.html" class="a_2">返回登录页</a>   <br />
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+</body>
+</html>

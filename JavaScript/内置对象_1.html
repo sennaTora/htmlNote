@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log(Math.max(19,514,19,114));
+    console.log(Math.abs('-1'));           //隐式转换
+
+    // console.log(Math.round(Math.random()*10));         
+    function getrandom(min,max) {                               //随机，包括最值
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+    console.log(getrandom(1,4)+'   （随机的）'); 
+
+//Math ↑//////////////////////////////////////////////////////////////////////////////////////////////////
+        let time_now = new Date();
+        console.log(time_now);                          //无参数时，返回当前时间（带格式）
+        console.log(time_now.getMonth() + 1);           //返回月份（已加一）
+        console.log(time_now.getDay());                 //返回星期（星期天是0）
+
+        let time_0 = new Date('2022-11-26 13:35:03');
+        console.log(time_now - time_0);  //返回经过的时间
+
+    
+        //以下4种都是，返回1970.1.1到现在的毫秒数(时间戳)
+        let date = new Date();
+        console.log(date.valueOf());                       //1
+        console.log(date.getTime());                       //2
+        let date_1 = + new Date(); console.log(date_1);    //3   
+        console.log(Date.now());                           //4   最容易的
+
+    function conut_down(set_time) {                        //倒计时
+            let now = new Date();
+            let time_0 = new Date(set_time);                      //若使用，有形式的时间，跟时间戳运算，就出错。。。。
+            let conut = (time_0 - now) / 1000;
+
+            let d = parseInt(conut / 60 / 60 / 24);
+            let h = parseInt(conut / 60 / 60 % 24);
+            let m = parseInt(conut / 60 % 60);
+            let s = parseInt(conut % 60);
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        console.log(conut_down('2022-12-10 20:00:00'));
+//时间 ↑////////////////////////////////////////////////////////////////////////////////////////////////////
+          
+    let arr_1 = new Array(3);               //括号内：数组长度  
+    let arr_2 = new Array(6,5,4,3,2,1);     //括号内：元素
+
+    console.log(  arr_1 instanceof Array  );    //判断是不是数组
+    console.log(  Array.isArray(arr_2)    );    //判断是不是数组
+    
+    arr_1.push(4,'pink');                    //尾部插入元素，返回值是新的长度
+    arr_1.unshift(5,'red');                  //开头插入元素，返回值是新的长度
+    arr_1.pop();                             //栈出
+    arr_1.shift();                           //弹出第一个
+
+    arr_1.reverse();                         //翻转顺序
+    arr_2.sort();                            //排升序（仅限个位数）    //有办法解决，可以找，这里不写了
+
+    console.log(arr_2.indexOf(4));           //查找并返回   第一个结果的下标， 若没有返回-1
+    console.log(arr_2.indexOf(4,[2]));       //第二个参数，开始查找的位置
+    console.log(arr_2.lastIndexOf(4));       //查找并返回 最后一个结果的下标， 若没有返回-1
+
+    console.log(arr_1.toString());           //转字符串
+    console.log(arr_1.join('|'));            //转字符串(可自定义分隔的符号)
+//数组 ↑//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    let str = 'anne';
+    console.log(str.length);                 //基本包装类型（简单的数据类型使用复杂方法，如indexOf）
+                                             //简单数据类型（值类型） 
+
+    console.log(str.charAt(3));              //根据位置返回字符
+    console.log(str[3]);                     //根据位置返回字符
+    console.log(str.charCodeAt(3));          //根据位置返回字符的ASCII码     可用于判断用户按了哪个键
+
+    console.log(str.substr(1,2));            //截取字符串，从1开始截取2个字符（还有slice、substring方法，略）
+
+    console.log(str.replace('a','b'));       //查找到第一个'a'，将其替换为'b'
+
+    let str_2 ='豌豆|向日葵|坚果墙';
+    console.log(str_2.split('|'));           //根据'|'，转为数组
+    //toUppperCase()、toLowerCase            //转换大小写
+   
+
+    //不要不断的给字符串赋值，占内存
+    //concat连接字符串，不过+也可以
+//字符串 ↑////////////////////////////////////////////////////////////////////////////////////////////////////// 
+    
+    let obj = {
+        name: '白日'
+    }
+    console.log(str[name]);                  //判断有无该属性
+    var timer = null;
+    console.log(typeof timers);
+
+</script>
+<body>
+    <a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN</a>
+    
+</html>

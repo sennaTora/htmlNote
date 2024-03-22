@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户界面</title>
+</head>
+
+<script>
+    window.onload = function fun() {
+        let a = document.querySelector('button');
+        a.addEventListener('click',function() {
+            //事件
+            alert('您将预约，是否确定？');
+            alert('预约成功');
+        })
+    }
+</script>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(bei.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+    }
+
+    a {
+        float: left;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    li {
+            list-style: none;
+    }
+
+    .button {
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 40px;
+        border: none;
+        color: black;
+        background-color: rgb(103, 207, 255,0);
+        border-radius: 8px;
+    }
+
+    .sit {
+        float: left;
+        width: 520px;
+        height: 300px;
+        background-color: rgba(103, 207, 255, 0.6);
+        border-radius: 0 20px 20px 0;
+    }
+
+    .list {
+        float: left;
+        width: 100px;
+        height: 300px;
+        line-height: 80px;
+        font-size: 20px;
+        background-color: #90ee90;
+        text-align:center;
+        padding: 0 20px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .list li {
+        float: left;
+        height: 100px;
+        line-height: 100px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .table tr td {
+        float: left;
+        border: 1px solid black;
+        height: 40px;
+        width: 55px;
+        margin-top: 10px;
+        margin-left: 5px;
+        text-align: center;
+        line-height: 40px;
+    } 
+
+    .tab {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .tab.list.current {
+        background-color: green;
+        color: aliceblue;
+    }
+
+    .item {
+        display: none;
+    }
+
+    .item_info {
+        padding: 20px 0 0 20px;
+    }
+
+    .table {
+        float: left;
+        height: 120px;
+        width: 210px;
+        border: 1px solid rgb(255, 255, 255);
+        margin-left: 25px;
+        margin-top: 20px;
+        border-radius:10px 10px 10px 10px; 
+    }
+
+    table td{
+        text-indent: 1em;
+    }
+
+    #top {
+        background-color: rgb(103, 207, 255, .3);
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+        color: rgb(103, 207, 255);
+    }
+
+    #bb {
+        background-color:rbg(103, 207, 255, 0.6);
+        font-size: 22px;
+    }
+
+    .father {
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        width: 800px;
+        height: 500px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .child {
+        float: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .insee_1 {
+        /* background-color: rgb(255, 255, 255); */
+        height: 90px;
+    }
+    
+    .insee_2 {
+        float: left;
+        width: 90px;
+        height: 10px;
+    }
+
+    .choose {
+        float: left;
+        height: 60px;
+        width: 800px;
+        color: black;
+        font-size: 35px;
+        line-height: 60px;
+        text-indent: 9em;
+        background-image: url(tp.png);
+        background-position: 0 40%;
+        border-radius:10px 10px 0 0; 
+    }
+
+    #con {
+        float: left;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 800px;
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+    }
+</style>
+
+<body>
+    <div id="top">
+        <div class="child"><img src="http://ee-c.lcu.edu.cn:84/picture/2E52725320DE49EB833895B3DDDE1B38.png" alt="图片消失">
+        </div>
+        <div class="child">&nbsp;&nbsp;自习室预约系统</div>
+    </div>
+    <div class="insee_1"></div>
+    <div class="father">
+        <div id="con">
+            <a href="#" class="choose">预约界面</a>
+            <div style="width:800px; height: 5px; float: left;"></div>
+            <br /><br /><br /><br /><br />
+            <div class="insee_2"></div>
+
+            <div class="list">
+                <ul>
+                    <li class="current">一楼</li>
+                    <li >二楼</li>
+                    <li >三楼</li>
+                </ul>
+            </div>
+
+            <div class="sit" align="center" border="1" cellspacing="0" width="400" height="200">   
+                <ul>
+                    <li class="item" style="display: block;">
+                        <div class="table">
+                        <table>
+                            <tr>
+                                <td><button class="button">1-01</button></td>
+                                <td><button class="button">1-02</button></td>
+                                <td><button class="button">1-03</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button">1-04</button></td>
+                                <td><button class="button">1-05</button></td>
+                                <td><button class="button">1-06</button></td>
+                            </tr>
+                        </table></div>
+                        <div class="table"><table>
+                            <tr>
+                                <td><button class="button">1-07</button></td>
+                                <td><button class="button">1-08</button></td>
+                                <td><button class="button">1-09</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button">1-10</button></td>
+                                <td><button class="button">1-11</button></td>
+                                <td><button class="button">1-12</button></td>
+                            </tr>
+                        </table></div>
+                        <div class="table"><table>
+                            <tr>
+                                <td><button class="button">1-13</button></td>
+                                <td><button class="button">1-14</button></td>
+                                <td><button class="button">1-15</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button">1-16</button></td>
+                                <td><button class="button">1-17</button></td>
+                                <td><button class="button">1-18</button></td>
+                            </tr>
+                        </table></div>
+                        <div class="table"><table>
+                            <tr>
+                                <td><button class="button">1-19</button></td>
+                                <td><button class="button">1-20</button></td>
+                                <td><button class="button">1-21</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button">1-22</button></td>
+                                <td><button class="button">1-23</button></td>
+                                <td><button class="button">1-24</button></td>
+                            </tr>
+                        </table></div>
+                    </li>
+                    <li class="item">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <td><button class="button">2-01</button></td>
+                                    <td><button class="button">2-02</button></td>
+                                    <td><button class="button">2-03</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">2-04</button></td>
+                                    <td><button class="button">2-05</button></td>
+                                    <td><button class="button">2-06</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">2-07</button></td>
+                                    <td><button class="button">2-08</button></td>
+                                    <td><button class="button">2-09</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">2-10</button></td>
+                                    <td><button class="button">2-11</button></td>
+                                    <td><button class="button">2-12</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">2-13</button></td>
+                                    <td><button class="button">2-14</button></td>
+                                    <td><button class="button">2-15</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">2-16</button></td>
+                                    <td><button class="button">2-17</button></td>
+                                    <td><button class="button">2-18</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">2-19</button></td>
+                                    <td><button class="button">2-20</button></td>
+                                    <td><button class="button">2-21</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">2-22</button></td>
+                                    <td><button class="button">2-23</button></td>
+                                    <td><button class="button">2-24</button></td>
+                                </tr>
+                            </table></div>
+                    </li>
+                    <li class="item">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <td><button class="button">3-01</button></td>
+                                    <td><button class="button">3-02</button></td>
+                                    <td><button class="button">3-03</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">3-04</button></td>
+                                    <td><button class="button">3-05</button></td>
+                                    <td><button class="button">3-06</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">3-07</button></td>
+                                    <td><button class="button">3-08</button></td>
+                                    <td><button class="button">3-09</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">3-10</button></td>
+                                    <td><button class="button">3-11</button></td>
+                                    <td><button class="button">3-12</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">3-13</button></td>
+                                    <td><button class="button">3-14</button></td>
+                                    <td><button class="button">3-15</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">3-16</button></td>
+                                    <td><button class="button">3-17</button></td>
+                                    <td><button class="button">3-18</button></td>
+                                </tr>
+                            </table></div>
+                            <div class="table"><table>
+                                <tr>
+                                    <td><button class="button">3-19</button></td>
+                                    <td><button class="button">3-20</button></td>
+                                    <td><button class="button">3-21</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="button">3-22</button></td>
+                                    <td><button class="button">3-23</button></td>
+                                    <td><button class="button">3-24</button></td>
+                                </tr>
+                            </table></div>
+                    </li>
+                </ul>
+            </div>
+            
+            <script>
+                //获取元素
+                let tab_list = document.querySelector('.list');
+                let lis = tab_list.querySelectorAll('li');
+                let items = document.querySelectorAll('.item');
+
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].setAttribute('index', i);//给小例设定索引号
+                    lis[i].onclick = function () {
+                        for (var i = 0; i < lis.length; i++) {
+                            lis[i].className = '';
+                        }
+                        this.className = 'current';
+                        //2.下面显示内容
+                        let index = this.getAttribute('index');console.log(index);
+                        for (var i = 0; i < lis.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                        items[index].style.display = 'block' ;
+                    }
+                }
+            </script>
+            
+
+            
+            <div class="child" style="width: 700px;"></div>
+            <div style="float: left;height:20px ;width: 900px;"></div>
+            <div style="float: left;height:20px ;width: 325px;"></div>
+            <a href="用户界面2(预约).html" class="button" id="bb"> 返回用户界面</a>
+            <div style="float: left;height:20px ;width: 300px;"></div>       
+        </div>
+    </div>
+
+</body>
+
+</html>

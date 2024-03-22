@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 样式目标  {
+            样式种类
+        } */
+        /* 记得要空格（比较规范） */
+
+
+        /* 标签选择器 ↓(针对一种标签) */ 
+        p {                                             /*  */
+            color: rgb(47, 215, 131);       
+            font-size: 24px;                 /* 要用;结尾 */
+        } 
+        body {
+            background-color: rgb(228, 232, 156);/* 声明（属性+值） */
+        }    
+        
+        /* 类名选择器 ↓（最常用）*/ 
+        .size {
+            width: 100px;
+            height: 100px;
+        }
+        .bkb {
+            background-color: rgb(255, 255, 255);
+        }
+        .klkl {
+            background-color: yellow;
+        }
+        .xzyb {
+            background-color: pink;
+        }
+        /* id选择器 ↓（一次性,人工一次性，靠自觉） */
+        #iii {
+            color:rgb(0, 162, 255);
+        }
+
+        /* 通配符选择器 ↓（无差别选定）*/ 
+        * {
+            font-size: 24px;
+        }
+    </style>
+ </head>
+ <body>
+    <p>在body里面</p>
+    
+    <div class="bkb size">  <img src="https://media.52poke.com/wiki/6/6b/175Togepi.png" width="100" /> </div>
+    <div class="klkl size"> wenzi</div>
+    <div class="xzyb size"> wenzi </div>
+
+    <span id="iii"> id选择器只许用一次</span>
+ </body>
+ </html>

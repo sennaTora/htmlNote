@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户界面</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(bei.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        background-color:aliceblue;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    #top {
+        background-color: rgb(103, 207, 255,.3);
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+        color: rgb(103, 207, 255);
+    }
+
+    .father {
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        width: 800px;
+        height: 500px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .child{
+        float: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .insee_1 {
+        /* background-color: rgb(255, 255, 255); */
+        height: 90px;
+    }
+
+    .choose {
+        float: left;
+        height: 60px;
+        width: 398px;
+        background-color: rgb(127, 163, 255);
+        font-size: 35px;
+        line-height: 60px;
+        text-indent: 4em;
+    }
+
+    #con {
+        float: left;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 800px;
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+    }
+</style>
+<body>
+    <div id="top">
+        <div class="child"><img src="http://ee-c.lcu.edu.cn:84/picture/2E52725320DE49EB833895B3DDDE1B38.png" alt="图片消失"> </div>
+        <div class="child">&nbsp;&nbsp;自习室预约系统</div>
+    </div>
+    <div class="insee_1"></div>
+    <div class="father">
+        <div id="con">
+            <a href="用户界面2(预约).html" class="choose" style="border-radius:10px 0 0 0;background-image: url(tp_1.png);background-position:0 40%;">用户信息</a>
+            <div style="width: 4px;height: 60px; float: left; box-shadow: 10px 10px 15px 10px rgb(0,0,0,.3) inset;"> </div>
+            <div class="choose" style="border-radius:0 10px 0 0;box-shadow: 0px 0px 15px 8px rgb(0,0,0,.3) inset;background-image: url(tp_2.png);background-position:0 40%;"><a href="用户界面1(签到).html">签到签退</a> </div>
+            <div style="width:800px; height: 5px; float: right;">            </div>
+            <div style="width:133px; height: 5px; float: right;">            </div>
+            <div style="width:133px; height: 5px; background-color: skyblue;float: right; border-radius: 50px;">            </div>
+            <div style="height:50px;width: 210px;float: left;"></div>
+            <div style="font-size:24px ;float: left; ">
+                <br /><br /><br /><br />
+                上传图片：&nbsp;&nbsp;&nbsp;<input type="file" value="上传二维码图片" style=" width:170px"/> 
+                <input type="submit" value="提交图片"/> <br /><br /><br />
+                输入动态码：<input type="ma">
+                
+                <input type="submit" value="提交信息"/> 
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

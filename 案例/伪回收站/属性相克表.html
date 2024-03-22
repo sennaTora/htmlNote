@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .double {
+            background-color: rgb(61, 197, 61);
+        }
+
+        .half {
+            background-color: rgb(228, 63, 63);
+        }
+
+        .zero {
+            background-color: rgb(91, 91, 91);
+        }
+
+        tr td {
+            background-color: white;
+        }
+
+        .roundytl {
+            width: 135px;
+            height: 70px;
+        }
+
+        .hover {
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <table align="left" class="roundy hover at-c" style="border: 2px solid #111; background:#808080; margin-right: 5px; margin-bottom: 5px;">
+
+        <tbody><tr>
+        <th colspan="2" rowspan="2" class="roundytl" style="width:80px">×
+        </th>
+        <th colspan="18" class="roundytr textwhite" style="background:#3A65BC"><small>防御方的宝可梦属性</small>
+        </th></tr>
+        <tr>
+        <td class="bgl-一般"><a href="/wiki/%E4%B8%80%E8%88%AC%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="一般（属性）"><span class="type-box-9 type-box-9-一般" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-一般"></span><span class="type-box-9-text">一般</span></span></a><style data-mw-deduplicate="TemplateStyles:r2149561">.mw-parser-output .type-box-9,.mw-parser-output .type-box-9-other{position:relative;display:inline-block;overflow:hidden;margin:0 1px;height:20px;border-radius:10px;text-align:center;vertical-align:middle;white-space:nowrap;font-size:14px;line-height:20px}.mw-parser-output .type-box-9{padding-left:17px;width:60px}.mw-parser-output .type-box-9-other{width:80px}.mw-parser-output .type-box-9-icon{position:absolute;top:0;left:2px;width:20px;height:20px}.mw-parser-output .type-box-9-text{color:#fff}.mw-parser-output .type-box-9-一般{background-color:#9fa19f}.mw-parser-output .type-box-9-格斗,.mw-parser-output .type-box-9-格鬥{background-color:#ff8000}.mw-parser-output .type-box-9-飞行,.mw-parser-output .type-box-9-飛行{background-color:#81b9ef}.mw-parser-output .type-box-9-毒{background-color:#9141cb}.mw-parser-output .type-box-9-地面{background-color:#915121}.mw-parser-output .type-box-9-岩石{background-color:#afa981}.mw-parser-output .type-box-9-虫,.mw-parser-output .type-box-9-蟲{background-color:#91a119}.mw-parser-output .type-box-9-幽灵,.mw-parser-output .type-box-9-幽靈{background-color:#704170}.mw-parser-output .type-box-9-钢,.mw-parser-output .type-box-9-鋼{background-color:#60a1b8}.mw-parser-output .type-box-9-火{background-color:#e62829}.mw-parser-output .type-box-9-水{background-color:#2980ef}.mw-parser-output .type-box-9-草{background-color:#3fa129}.mw-parser-output .type-box-9-电,.mw-parser-output .type-box-9-電{background-color:#fac000}.mw-parser-output .type-box-9-超能力{background-color:#ef4179}.mw-parser-output .type-box-9-冰{background-color:#3fd8ff}.mw-parser-output .type-box-9-龙,.mw-parser-output .type-box-9-龍{background-color:#5060e1}.mw-parser-output .type-box-9-恶,.mw-parser-output .type-box-9-惡{background-color:#50413f}.mw-parser-output .type-box-9-妖精{background-color:#ef70ef}</style>
+        </td>
+        <td class="bgl-格斗"><a href="/wiki/%E6%A0%BC%E6%96%97%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="格斗（属性）"><span class="type-box-9 type-box-9-格斗" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-格斗"></span><span class="type-box-9-text">格斗</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-飞行"><a href="/wiki/%E9%A3%9E%E8%A1%8C%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="飞行（属性）"><span class="type-box-9 type-box-9-飞行" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-飞行"></span><span class="type-box-9-text">飞行</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-毒"><a href="/wiki/%E6%AF%92%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="毒（属性）"><span class="type-box-9 type-box-9-毒" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-毒"></span><span class="type-box-9-text">毒</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-地面"><a href="/wiki/%E5%9C%B0%E9%9D%A2%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="地面（属性）"><span class="type-box-9 type-box-9-地面" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-地面"></span><span class="type-box-9-text">地面</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-岩石"><a href="/wiki/%E5%B2%A9%E7%9F%B3%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="岩石（属性）"><span class="type-box-9 type-box-9-岩石" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-岩石"></span><span class="type-box-9-text">岩石</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-虫"><a href="/wiki/%E8%99%AB%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="虫（属性）"><span class="type-box-9 type-box-9-虫" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-虫"></span><span class="type-box-9-text">虫</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-幽灵"><a href="/wiki/%E5%B9%BD%E7%81%B5%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="幽灵（属性）"><span class="type-box-9 type-box-9-幽灵" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-幽灵"></span><span class="type-box-9-text">幽灵</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-钢"><a href="/wiki/%E9%92%A2%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="钢（属性）"><span class="type-box-9 type-box-9-钢" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-钢"></span><span class="type-box-9-text">钢</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-火"><a href="/wiki/%E7%81%AB%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="火（属性）"><span class="type-box-9 type-box-9-火" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-火"></span><span class="type-box-9-text">火</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-水"><a href="/wiki/%E6%B0%B4%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="水（属性）"><span class="type-box-9 type-box-9-水" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-水"></span><span class="type-box-9-text">水</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-草"><a href="/wiki/%E8%8D%89%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="草（属性）"><span class="type-box-9 type-box-9-草" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-草"></span><span class="type-box-9-text">草</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-电"><a href="/wiki/%E7%94%B5%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="电（属性）"><span class="type-box-9 type-box-9-电" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-电"></span><span class="type-box-9-text">电</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-超能力"><a href="/wiki/%E8%B6%85%E8%83%BD%E5%8A%9B%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="超能力（属性）"><span class="type-box-9 type-box-9-超能力" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-超能力"></span><span class="type-box-9-text">超能力</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-冰"><a href="/wiki/%E5%86%B0%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="冰（属性）"><span class="type-box-9 type-box-9-冰" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-冰"></span><span class="type-box-9-text">冰</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-龙"><a href="/wiki/%E9%BE%99%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="龙（属性）"><span class="type-box-9 type-box-9-龙" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-龙"></span><span class="type-box-9-text">龙</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-恶"><a href="/wiki/%E6%81%B6%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="恶（属性）"><span class="type-box-9 type-box-9-恶" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-恶"></span><span class="type-box-9-text">恶</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="bgl-妖精"><a href="/wiki/%E5%A6%96%E7%B2%BE%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="妖精（属性）"><span class="type-box-9 type-box-9-妖精" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-妖精"></span><span class="type-box-9-text">妖精</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td></tr>
+        <tr class="default">
+        <th rowspan="18" class="textwhite" style="background:#BC413A;writing-mode:vertical-rl;text-orientation:upright;min-width:1.6em "><small>攻击方使用的招式属性</small>
+        </th>
+        <td class="bgl-一般"><a href="/wiki/%E4%B8%80%E8%88%AC%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="一般（属性）"><span class="type-box-9 type-box-9-一般" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-一般"></span><span class="type-box-9-text">一般</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-格斗"><a href="/wiki/%E6%A0%BC%E6%96%97%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="格斗（属性）"><span class="type-box-9 type-box-9-格斗" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-格斗"></span><span class="type-box-9-text">格斗</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-飞行"><a href="/wiki/%E9%A3%9E%E8%A1%8C%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="飞行（属性）"><span class="type-box-9 type-box-9-飞行" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-飞行"></span><span class="type-box-9-text">飞行</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-毒"><a href="/wiki/%E6%AF%92%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="毒（属性）"><span class="type-box-9 type-box-9-毒" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-毒"></span><span class="type-box-9-text">毒</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-地面"><a href="/wiki/%E5%9C%B0%E9%9D%A2%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="地面（属性）"><span class="type-box-9 type-box-9-地面" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-地面"></span><span class="type-box-9-text">地面</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-岩石"><a href="/wiki/%E5%B2%A9%E7%9F%B3%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="岩石（属性）"><span class="type-box-9 type-box-9-岩石" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-岩石"></span><span class="type-box-9-text">岩石</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-虫"><a href="/wiki/%E8%99%AB%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="虫（属性）"><span class="type-box-9 type-box-9-虫" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-虫"></span><span class="type-box-9-text">虫</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-幽灵"><a href="/wiki/%E5%B9%BD%E7%81%B5%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="幽灵（属性）"><span class="type-box-9 type-box-9-幽灵" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-幽灵"></span><span class="type-box-9-text">幽灵</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td class="zero">0×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-钢"><a href="/wiki/%E9%92%A2%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="钢（属性）"><span class="type-box-9 type-box-9-钢" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-钢"></span><span class="type-box-9-text">钢</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-火"><a href="/wiki/%E7%81%AB%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="火（属性）"><span class="type-box-9 type-box-9-火" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-火"></span><span class="type-box-9-text">火</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-水"><a href="/wiki/%E6%B0%B4%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="水（属性）"><span class="type-box-9 type-box-9-水" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-水"></span><span class="type-box-9-text">水</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-草"><a href="/wiki/%E8%8D%89%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="草（属性）"><span class="type-box-9 type-box-9-草" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-草"></span><span class="type-box-9-text">草</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-电"><a href="/wiki/%E7%94%B5%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="电（属性）"><span class="type-box-9 type-box-9-电" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-电"></span><span class="type-box-9-text">电</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-超能力"><a href="/wiki/%E8%B6%85%E8%83%BD%E5%8A%9B%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="超能力（属性）"><span class="type-box-9 type-box-9-超能力" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-超能力"></span><span class="type-box-9-text">超能力</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="zero">0×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-冰"><a href="/wiki/%E5%86%B0%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="冰（属性）"><span class="type-box-9 type-box-9-冰" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-冰"></span><span class="type-box-9-text">冰</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-龙"><a href="/wiki/%E9%BE%99%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="龙（属性）"><span class="type-box-9 type-box-9-龙" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-龙"></span><span class="type-box-9-text">龙</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="zero">0×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-恶"><a href="/wiki/%E6%81%B6%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="恶（属性）"><span class="type-box-9 type-box-9-恶" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-恶"></span><span class="type-box-9-text">恶</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td></tr>
+        <tr class="default">
+        <td class="bgl-妖精"><a href="/wiki/%E5%A6%96%E7%B2%BE%EF%BC%88%E5%B1%9E%E6%80%A7%EF%BC%89" title="妖精（属性）"><span class="type-box-9 type-box-9-妖精" style="width: 50px;"><span class="type-box-9-icon sprite-type sprite-type-妖精"></span><span class="type-box-9-text">妖精</span></span></a><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r2149561">
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td class="half"><sup>1</sup>⁄<sub>2</sub>×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td>1×
+        </td>
+        <td class="double">2×
+        </td>
+        <td class="double">2×
+        </td>
+        <td>1×
+        </td></tr>
+        <tr>
+        <td colspan="20" class="roundybottom-5 textblack at-l" style="background:#BABABA;"><small>这些倍数适用于《<a href="/wiki/%E5%AF%B6%E5%8F%AF%E5%A4%A2_%EF%BC%B8%EF%BC%8F%EF%BC%B9" title="宝可梦 Ｘ／Ｙ">Ｘ／Ｙ</a>》及之后的游戏。</small>
+        </td></tr></tbody></table>
+</body>
+</html>

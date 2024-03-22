@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .box {
+        background-color: rgb(255, 0, 0,.8);
+        float: left;
+
+        /* 浮动后，脱离标准位置，与标准流不在同一图层 */
+        /* 浮动后，自动变为行内块*/
+        /* 浮动常将标准流做父集 */
+
+        margin: 2px;
+        width: 150px;
+        height: 150px;
+        border: 5px solid black;
+    }
+
+    .father {
+        margin: 0 auto;
+        width: 600px;
+        /* height: 300px; */
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow:hidden;                /* 清除浮动_2   (父级overflow法） */
+    }
+
+    .father::after {                    /* 清除浮动_3   (after伪对象)(来自课本) */
+        content: "";   /* 必须 */
+        height: 0;     /* 必须 */
+    }/*低于IE8的IE浏览器，不能用*/
+
+    .clear {                            /* 清除浮动_1   (隔墙法) */
+        clear:both;
+    } 
+
+      /* 标准流占有时，浮动也不会浮到其上面去*/
+</style>
+<body>   
+    <div class="father">
+    <div class="box">壹</div>
+    <div class="box">贰</div>
+    <div class="box">叁</div>
+    <div class="box">肆</div>
+    <div class="box">伍</div> 
+    <div class="box">陆</div>
+    <div class="box">柒</div>
+    <div class="clear"></div>           <!-- 清除浮动_1（必须使用块元素来隔墙） -->
+    
+    </div>
+</body>
+</html>

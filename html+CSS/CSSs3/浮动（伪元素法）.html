@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .clearfix:after{                   清除浮动_3 （after伪元素法）
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    } */
+    .clearfix:before,
+    .clearfix:after {                   /* 清除浮动_3 （双伪元素法） */
+        content:"";
+        display:table;
+    }
+
+    .clearfix:after {
+        clear:both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+    
+    .box {
+        background-color: rgb(255, 0, 0,.8);
+        float: left;
+        /* 浮动后，脱离标准位置，与标准流不在同一图层 */
+        /* 浮动后，自动变为行内块*/
+        /* 浮动常将标准流做父集 */
+
+        margin: 2px;
+        width: 150px;
+        height: 150px;
+        border: 5px solid black;
+    }
+
+    .father {                           
+        margin: 0 auto;
+        width: 600px;
+        /* height: 300px; */
+        background-color: rgba(0, 0, 0, .8);
+    }
+</style>
+<body>   
+    <div class="father clearfix">       <!-- 清除浮动_3 （after伪元素法） -->
+    <div class="box">壹</div>
+    <div class="box">贰</div>
+    <div class="box">叁</div>
+    <div class="box">肆</div>
+    <div class="box">伍</div>
+    <div class="box">陆</div>
+    <div class="box">柒</div>    
+    </div>
+</body>
+</html>

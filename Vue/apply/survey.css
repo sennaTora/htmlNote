@@ -1,0 +1,58 @@
+* {
+    font-size: 26px;
+}
+
+textarea {
+    float: left;
+    resize: none;
+    width: 500px;
+    /* border: none; */
+}
+
+.ra_dio {
+    width: 26px;
+    height: 26px;
+}
+
+.div_q {
+    /* float: left; */
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border: 5px;
+    width: auto;height: auto;
+    background-color: #67d1ff;
+    overflow: hidden;
+}
+
+.DIO {
+    float: left;
+    height: auto;
+    width: 200px;
+}
+
+#sub {
+    float: none; 
+    /* display: inline-block; */
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+    position:relative;
+    left: 300px;
+    background-color: aliceblue;
+}
+
+#MAIN {
+    /* align-self: center; */
+    float:none;
+    background-color: #ffbdfe;
+    margin: auto;
+    width: 1000px;
+    height: auto;
+}
+
+#main {
+    position:relative;
+    left: 100px;
+    background-color: #faff60;
+}

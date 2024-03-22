@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        /* 课本P92,挺清楚的 */
+        /* 阴影，浏览器上打开这个“盒子模型.html”，看图片 */
+        * {
+            padding: 0;       /*内边框*/
+            margin: 0;        /*外边框*/
+        }
+
+        body {
+             /*课本P104后*/
+            background-image: url(lpls.jpg);                         
+            background-attachment: fixed;   /* 是否随页面滚动*/
+            background-position: 50% 0;     /* 位置 */
+            background-repeat: no-repeat;   /* 平铺方式 */
+            background-size: cover;         /* 大小 */
+            /* background-origin: padding-box;  显示区域 */
+            /* background-clip: border-box;     裁剪区域 */
+            /* 设置多层背景，见P109 */
+            /* background:（各种属性值）;    复合属性。不分先后，直接加*/
+
+        } 
+
+        div {
+            width: 300px;height: 200px;
+            border-width: 5px;                              /*边框宽度*/
+            border-style: solid;                            /*边框样式*/    /*solid 实线、dashed 虚线、dotted 点线*/
+            border-color: pink;                           /*边框颜色*/
+
+            border-top: 10px dashed rgb(0, 255, 187);            /*边框可分开写(为了后者居上，要写在后面)*/
+            border-right: 10px dotted antiquewhite;
+        }
+
+        p {
+            height: 250px;
+            border: 2px solid aqua;                       /*复合写法*/
+
+            margin-bottom: 20px;                            /*外边距*/
+            margin: 10px 10px 10px 10px;                    /*外边距*/
+
+            /*border-radius: 20px;                          /*圆角边框,可用百分比,或像素*/
+            border-radius: 20px 60% 20px 60%;               /*顺时针4个角*/
+        }
+
+        table {
+            width: 400px;height: 400px;
+            border: 2px solid rgb(0, 255, 187);           /*边框会影响盒子大小（皮厚）*/
+            border-collapse: collapse;                      /*合并相邻边框*/
+            box-sizing: border-box;                         /*使其大小不变*/    /* 课本P103 */
+            margin: 0 auto;                                 /*上下外边距0，水平居中*/
+            /*行内元素&行内块元素水平居中：给父类添加text-align:center;*/
+        }
+
+        table th {
+            border: 2px solid rgb(26, 0, 143);
+            padding-top: 20px;                              /*内间距*/
+            padding-bottom: 20px;
+        } 
+ 
+        table td {
+            border: 2px solid rgb(0, 123, 255);
+            padding: 5px;                                   /*内间距*/
+            /* padding: 5px 10px 15px 20px; */              /* 顺时针顺序 */
+        } 
+
+        .div_big {
+            background-color:rgba(240, 248, 255, .5);
+            width: 400px;height: 400px;
+            overflow: hidden;                               /*解决 外边距塌陷 问题*/
+        }
+
+        .div_small {
+            background-color:aquamarine;
+            width: 200px;height: 200px;
+            margin-top: 200px;
+        }
+
+        .div_shadow {
+            box-sizing:border-box;
+            border: none;
+            margin: 10px 10px;
+            width: 675px;height: 355px;
+            background-image: url(sha.png);
+        }
+
+        div:hover {
+            box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.3);
+            /*水平阴影位置、垂直阴影位置、模糊距离、尺寸、颜色*//*可以改为内部阴影，在最后加inset*/
+            /* 可以叠加，加逗号后写第二层阴影就行 */
+        }
+
+        span {
+            font-size: 30px;
+            text-shadow: 3px 2px 3px rgb(0,0,0,0.6);
+        }
+
+        .P {                                        /* 定位属性 ！ */
+        position:fixed;
+        /* absolute	绝对定位,对于父元素 */
+        /* fixed    绝对定位,对于浏览器窗口 */
+        /* relative	相对定位,对于正常位置 */
+        top: 100px;
+        right: 150px;
+    }
+    </style>
+</head>
+<body>
+    <div><span>文字阴影</span></div>
+    <p></p>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mon</th>
+                <th>Tues</th>
+                <th>Wed</th>
+                <th>Thur</th>
+                <th>Fri</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="div_big"><div class="div_small"></div></div>
+
+    <div class="div_shadow"></div>
+
+    <div></div>
+
+    <img src="https://www.smogon.com/dex/media/sprites/xy/masquerain.gif" class="P">
+</body>
+</html>

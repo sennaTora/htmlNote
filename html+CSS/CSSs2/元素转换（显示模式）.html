@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        div {                                            /* 转为行内元素 */
+            display: inline;
+        }
+        
+        span {                                           /* 转为块元素 */
+            display: block;
+        }
+
+        a {                                              /* 转为行内块元素 */
+            display: inline-block;
+        }
+        /* display:none 是隐藏 */
+        .red {
+            background-color: rgb(255, 0, 0);
+        }
+        .blue {
+            background-color: rgb(0, 128, 255);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">  div转换后</div>
+    <div class="blue"> div转换后</div>
+    <br />
+    <span class="red"> span转换后</span>
+    <span class="blue"> div转换后</span>
+    <br />
+    <a href="#" class="red"> a转换为行内块元素1</a>
+    <a href="#" class="blue">a转换为行内块元素2</a>
+</body>
+</html>

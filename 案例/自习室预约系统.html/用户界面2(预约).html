@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户界面</title>
+</head>
+
+<script>
+    window.onload = function fun() {
+        let a = document.querySelector('button');
+        a.addEventListener('click',function() {
+            //事件
+            prompt('您将取消预约，如果确定，请输入密码： ');
+            alert('取消预约成功');
+        })
+    }
+</script>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(bei.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        background-color: aliceblue;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    input {
+        float: left;
+    }
+
+    .button {
+        float: left;
+        width: 120px;
+        height: 40px;
+        background-color: rgba(222, 222, 222);
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 40px;
+        border: none;
+        color: black;
+        background-color: rgb(103, 207, 255,.5);
+    }
+
+    table td{
+        text-indent: 1em;
+    }
+
+    #top {
+        background-color: rgb(103, 207, 255, .3);
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+        color: rgb(103, 207, 255);
+    }
+
+    #i_p {
+        width: 120px;
+        height: 40px;
+    }
+
+    .father {
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        width: 800px;
+        height: 500px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .child {
+        float: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .insee_1 {
+        /* background-color: rgb(255, 255, 255); */
+        height: 90px;
+    }
+    
+    .insee_2 {
+        float: left;
+        width: 90px;
+        height: 10px;
+    }
+
+    .choose {
+        float: left;
+        height: 60px;
+        width: 398px;
+        background-color: rgb(127, 163, 255);
+        font-size: 35px;
+        line-height: 60px;
+        text-indent: 4em;
+    }
+
+    #con {
+        float: left;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 800px;
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+    }
+</style>
+
+<body>
+    <div id="top">
+        <div class="child"><img src="http://ee-c.lcu.edu.cn:84/picture/2E52725320DE49EB833895B3DDDE1B38.png" alt="图片消失">
+        </div>
+        <div class="child">&nbsp;&nbsp;自习室预约系统</div>
+    </div>
+    <div class="insee_1"></div>
+    <div class="father">
+        <div id="con">
+            <a href="用户界面2(预约).html" class="choose"
+                style="border-radius:10px 0 0 0; box-shadow: 0px 0px 15px 8px rgb(0,0,0,.3) inset;background-image: url(tp_1.png);background-position:0 40%;">用户信息</a>
+            <div
+                style="width: 4px;height: 60px; float: left; box-shadow: 10px 10px 15px 10px rgb(0,0,0,.3) inset;">
+            </div>
+            <a href="用户界面1(签到).html"class="choose"style=" background-image: url(tp_2.png); border-radius:0 10px 0 0;background-position:0 40%;">签到签退</a>
+            <div style="width:800px; height: 5px; float: left;"></div>
+            <div style="width:133px; height: 5px;float: left;"></div>
+            <div style="width:133px; height: 5px; background-color: skyblue;float: left; border-radius: 50px;"></div>
+            <br /><br /><br /><br /><br />
+            <div class="insee_2"></div>
+            <div class="child" style="width: 700px;">
+                手机号:111****1111 <br />
+                信用分:100 <br />
+                预约信息： <br />&nbsp;
+
+                <table align="center" border="1"cellpadding="10"  cellspacing="0" width="600" height="200">
+                    <thead><th>时间</th><th>座位</th><th>是否成功签到</th><th>是否成功签退</th><th>扣分记录</th></thead>
+                    <tr><td>2022-11-26</td><td>2-01</td><td>是</td><td>是</td><td>0</td></tr>
+                    <tr><td>2022-11-15</td><td>3-25</td><td>是</td><td>否</td><td>-1</td></tr>
+                    <tr><td>2022-10-24</td><td>1-15</td><td>是</td><td>是</td><td>0</td></tr>
+                </table>
+                </div>
+                <div style="float: left;height:20px ;width: 900px;"></div>
+                <div style="float: left;height:20px ;width: 120px;"></div>
+                <a href="预约界面.html" class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 预约座位</a>
+                <div style="float: left;height:20px ;width: 300px;"></div>                
+                <button class="button">取消预约</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 12px;
+        font-family: '宋体';
+        color: #515151;
+    }
+
+    .big_box {
+        height: 600px;
+        width: 660px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000000;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .inp0 {
+        border: 1px solid #CCC;
+        border-radius: 5px;
+
+        padding: 3px 3px 3px 26px;
+        font-size: 12px;
+        color: #949494;
+
+        width: 264px;
+        height: 12px;
+    }
+
+    .inp1 {
+        border: 1px solid #CCC;
+        border-radius: 5px;
+    }
+
+    .inp2 {
+        width: 432px;
+        height: 164px;
+        color: #949494;
+        padding: 3px;
+    }
+
+    #name0 {
+        background:url(img/name.png) no-repeat;
+        background-position: 2px top;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: #0b0b0b;
+        margin-bottom: 30px;
+    }
+
+    span {
+        font-size: 12px;
+        font-style: normal;
+    }
+
+    td {
+        margin-bottom: 26px;
+    }
+</style>
+<body>
+    <div class="big_box">
+        <h2>下面就开始在线报名吧<span>（以下信息是报名的重要依据，请认真填写）</span></h2>
+        <table>
+            <tr>
+                <td width="78px" align="right" style="margin-left:8px;">姓名<span class="red">*</span></td>
+                <td><input type="text" placeholder="报名的重要依据，请认真填写" class="inp0" id="name0"></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">手机<span class="red">*</span></td>
+                <td><input type="text" placeholder="报名的重要依据，请认真填写" class="inp0" style="background:url(img/phone.png) no-repeat; background-position: 2px top;"></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">性别<span class="red">*</span></td>
+                <td><input type="radio"  name="sex" id="an" checked="checked"/><label for="an">男</label>  
+                    <input type="radio"  name="sex" id="v"/><label for="v">女</label></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">邮箱<span class="red">*</span></td>
+                <td><input type="email" class="inp0" style="width: 122px; height: 12px; background:url(img/email.png) no-repeat; background-position: 2px top;"></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">意向课程<span class="red">*</span></td>
+                <td><select>
+                    <option>网页平面UI设计基础班</option><option selected="selected">网页平面UI设计就业班</option><option>网页平面UI设计基础班</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">了解渠道<span class="red">*</span></td>
+                <td><input type="checkbox" name="k"/> baidu 
+                    <input type="checkbox" name="k"/> 老学员 
+                    <input type="checkbox" name="k"/> 朋友推荐 
+                    <input type="checkbox" name="k"/> CSDN网站 
+                    <input type="checkbox" name="k"/> 视频教程 
+                    <input type="checkbox" name="k"/> 其它</td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">留言</td>
+                <td><textarea cols="50" rows="10" class="inp2"  placeholder="请简述您有没有设计基础，以及为什么选择学习网页平面UI设计？"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right" style="margin-left:8px;">
+                    <input type="image" src="img/login.gif">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

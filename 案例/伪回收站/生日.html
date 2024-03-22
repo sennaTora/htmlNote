@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 根据生日计算年龄
+    // function jsGetAge(birth) {
+    //     var returnAge;//结果
+
+    //     //获取出生年月日
+    //     var strBirthdayArr = birth.split("-");
+    //     var Year = strBirthdayArr[0];
+    //     var Month = strBirthdayArr[1];
+    //     var Day = strBirthdayArr[2];
+    //     var hour = strBirthdayArr[3];
+    //     var min = strBirthdayArr[4];
+    //     var sec = strBirthdayArr[5];
+
+         d = new Date();
+         var nowYear = d.getFullYear();
+         var nowMonth = d.getMonth() + 1;
+    //     var nowDay = d.getDate();
+    //     var nowhours = d.getHours();
+    //     var nowmin = d.getMinutes();
+    //     var nowsec = d.getSeconds();
+
+
+    //     var age_Diff = nowYear - Year;      //年之差
+    //     var month_Diff = nowMonth - Month;  //月之差
+    //     var day_Diff = nowDay - Day;        //日之差
+    //     var hours_Diff = nowhours - hour;   //时之差
+    //     var min_Diff = nowmin - min;        //分之差
+    //     var sec_Diff = nowsec - sec;        //秒之差
+
+    //     if (sec_Diff < 0) {
+    //         min_Diff--;
+    //         sec_Diff+=60;
+    //     }
+
+    //     if (min_Diff < 0) {
+    //         hours_Diff --;
+    //         min_Diff+=60;
+    //     }
+
+    //     if (hours_Diff < 0) {
+    //         day_Diff --;
+    //         hours_Diff+=24;
+    //     }
+
+    //     if (day_Diff < 0) {   //没过了18号的情况
+    //         month_Diff --;
+    //         day_Diff+=30;  //主要是这个数字的问题
+    //     }
+
+    //     if (month_Diff < 0) {
+    //         age_Diff --;
+    //         month_Diff+=12;
+    //     }
+
+    //     returnAge=age_Diff+'Y '+month_Diff+'M '+day_Diff+'D '+hours_Diff+'H '+min_Diff+'M '+sec_Diff+'S';//
+
+
+    //     return returnAge;//返回周岁年龄
+    // }
+
+    // console.log(jsGetAge(brith));
+    // window.setTimeout(console.log(jsGetAge('2003-03-18-18-25-00')), 1000);
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

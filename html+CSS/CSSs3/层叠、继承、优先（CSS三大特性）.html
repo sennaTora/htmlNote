@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三大特性</title>
+</head>
+<style>
+    body {
+        color: greenyellow;
+    }
+
+    div {
+        color:red;
+        font-size: 30px;    
+        line-height: 1.5;              /*行高可以用1.5这种倍数*/
+    }
+
+    div{
+        color: pink;
+    }
+
+    h6 {
+        color: blueviolet!important;           /* !important   必定优先*/
+    }
+
+    dl li{                                       /* 权重叠加(同类相加只能超过同类) */
+        color: aquamarine;
+    }
+
+    li {
+        color:rgb(128, 0, 0);
+    }
+</style>
+<body>
+    <div>层叠性:冲突时，后者居上</div>
+    <div><p>继承性:子级继承父级属性</p></div>       <!-- 可继承字体，字号，颜色，行高 -->
+
+    <div><h6>优先性：冲突时，选择器有优先级</h6></div>          
+    <!-- （越精准，越优先）--> <!-- 同优先级（权重）时，越近越优先 -->
+    <!-- 继承或* -->                       <!-- 后攻之尾，即使父类用了!important，那也与子类无关-->
+    <!-- 元素 -->
+    <!-- 类，伪类 -->
+    <!-- id -->
+    <!-- 行内 -->
+    <!-- !important -->                    <!-- 加上这个，必定优先，先制度+∞ -->
+    <!-- a 链接有默认的样式，不能靠继承来改属性 -->
+
+    
+    <dl>                                   <!-- 权重叠加 (权重越高越优先)-->
+        <h6>寄扬州韩绰判官</h6>
+        <li>青山隐隐水迢迢，</li>
+        <li>秋尽江南草未凋。</li>
+        <li>二十四桥明月夜，</li>
+        <li>玉人何处教吹箫？</li>
+    </dl>
+</body>
+</html>
